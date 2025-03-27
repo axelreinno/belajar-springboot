@@ -11,5 +11,4 @@ public class BelajarSpringbootApplication {
 	public static void main(String[] args) {
 		ApplicationContext context = SpringApplication.run(BelajarSpringbootApplication.class, args);
 	}
-
 }

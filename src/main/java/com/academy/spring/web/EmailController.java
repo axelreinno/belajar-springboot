@@ -1,5 +1,6 @@
 package com.academy.spring.web;
 
+import com.academy.spring.configs.MailConfig;
 import com.academy.spring.services.EmailService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -24,4 +25,5 @@ public class EmailController {
 
         return true;
     }
+
 }
