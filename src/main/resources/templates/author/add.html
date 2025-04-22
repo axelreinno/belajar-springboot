@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body>
+
+<div>
+    <div class="mx-auto max-w-screen-xl bg-white">
+        <h1 class="mt-20 mb-10 ml-5 text-2xl font-bold text-gray-900">Authors</h1>
+        <div class="bg-white py-2 px-3">
+            <nav class="flex flex-wrap gap-4">
+                <a href="/author/list"
+                   class="inline-flex whitespace-nowrap border-b-2 border-transparent border-b-purple-600 py-2 px-3 text-sm font-semibold text-purple-600 transition-all duration-200 ease-in-out">
+                    Authors
+                </a>
+            </nav>
+        </div>
+    </div>
+    <div  class="min-h-screen w-screen bg-gray-50">
+        <div class="mx-auto px-2 py-10">
+            <form method="POST" action="#" th:action="@{/author/add}" th:object="${authorDto}" class="mx-auto bg-white p-8 rounded-2xl shadow-lg w-full max-w-md space-y-6">
+                <h2 class="text-2xl font-bold text-gray-800 text-center">Add Author</h2>
+
+                <div>
+                    <label for="name" class="block text-sm font-medium text-gray-700">Name</label>
+                    <input th:field="*{name}" type="text" id="name" name="name" placeholder="Your name"
+                           class="mt-1 w-full px-4 py-2 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500" required />
+                </div>
+
+                <div>
+                    <label for="name" class="block text-sm font-medium text-gray-700">Description</label>
+                    <input th:field="*{description}" type="text" id="description" name="description" placeholder="Your description"
+                           class="mt-1 w-full px-4 py-2 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500" required />
+                </div>
+
+                <button type="submit"
+                        class="w-full bg-blue-600 text-white py-2 px-4 rounded-xl hover:bg-blue-700 transition duration-300">
+                    Submit
+                </button>
+
+            </form>
+        </div>
+    </div>
+</body>
+</html>
