@@ -17,12 +17,13 @@ public class AuthorController {
 
     @GetMapping("list")
     public String listAuthor(Model model) {
+        model.addAttribute("authorDto", authorService.findAuthorList());
         return "author/list";
     }
 
     @GetMapping("add")
     public String addAuthor(Model model) {
-        model.addAttribute("authorDto", new AuthorDto("Axel", "Description"));
+        model.addAttribute("authorDto", new AuthorDto(null, null));
         return "author/add";
     }
 

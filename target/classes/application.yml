@@ -1,0 +1,21 @@
+spring:
+  datasource:
+    hikari:
+      connection-timeout: 20000
+      idle-timeout: 10000
+      max-lifetime: 600000
+      maximum-pool-size: 50
+    url: jdbc:postgresql://localhost:5432/academy
+    username: admin
+    password: admin
+  jpa:
+    database: POSTGRESQL
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        jdbc:
+          batch_size: 100
+        order_inserts: true
+    show-sql: true
